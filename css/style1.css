@@ -2,16 +2,15 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
 }
-
-
 
 #gridparent{
     display: grid;
     height: 100vh;
     width: 100vw;
 
-    grid-template-rows: 60px 800px 400px 60px;
+    grid-template-rows: 60px 800px 500px 60px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "he he na na na"
@@ -19,15 +18,67 @@
     "ar ar ar ar ar"
     "fo fo fo fo fo";
 }
-header{background-color: blanchedalmond;grid-area: he;}
-nav{background-color: darkgrey;grid-area: na;}
-article{background-color:  goldenrod;grid-area: ar;}
+header{
+    background-color: rgb(83, 80, 80);
+    grid-area: he;
+    height:60px;
+    width: 100vw;
+}
+nav{
+    background-color: rgb(83, 80, 80);
+    grid-area: na;
+    height: 60px;
+    right: 0;
+}
+article{background-color:  rgb(83, 80, 80);grid-area: ar;}
 footer {background-color: blanchedalmond;grid-area: fo;}
 section{background-color: burlywood;grid-area: se;}
 
 .sticky{
-    position: sticky;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+        box-shadow: 0px 10px 10px -10px black;
 }
+
+
+
+/* Article text and flexparent*/
+
+.flexarticle{
+    display: flex;
+    align-items: center;
+    box-shadow: -15px 10px 10px -10px black;
+
+}
+
+#articletxt{
+    width: 65vw;
+    background-color: rgb(236, 231, 223);
+    box-shadow: -15px -10px 10px -10px black;
+    margin-left: 70px;
+    padding: 10px;
+    height: 400px;
+    overflow:auto;
+
+}
+
+.Rubrik{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.brödtext{
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 /* Listan header*/
 
@@ -37,7 +88,7 @@ section{background-color: burlywood;grid-area: se;}
     padding: 0;  
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -54,8 +105,9 @@ section{background-color: burlywood;grid-area: se;}
 }
 
 .LinkText{
-    color: black;
+    color: darkgrey;
     text-decoration: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -78,12 +130,20 @@ section{background-color: burlywood;grid-area: se;}
       font-size: 42px;
   }
 
-/* Bild resizing */
+/* Bild resizing samt shadow */
+
+#articleimage{
+    height: 400px;
+    width: 25vw;
+    margin-left: 50px;
+    box-shadow: -15px -10px 10px -10px black;
+}
 
 .bigsectionimage{
-    width:100%;
+    width:100vw;
     height:800px;
 }
 
-
-/*
+.bigsectionimage{
+    box-shadow:-15px 10px 10px -10px black;
+}
