@@ -1,0 +1,3 @@
+function toggleMeny() {
+    document.querySelector('.')
+}
