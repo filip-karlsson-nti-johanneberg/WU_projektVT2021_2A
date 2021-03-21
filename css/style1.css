@@ -10,7 +10,7 @@
     height: 100vh;
     width: 100vw;
 
-    grid-template-rows: 60px 800px 500px 60px;
+    grid-template-rows: 60px 800px 500px 120px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "he he na na na"
@@ -31,8 +31,19 @@ nav{
     right: 0;
 
 }
-article{background-color:  rgb(83, 80, 80);grid-area: ar;}
-footer {background-color: blanchedalmond;grid-area: fo;}
+article {
+    background-color:  rgb(83, 80, 80);
+    grid-area: ar;
+width: 100vw;
+
+
+}
+
+footer {
+    background-color:rgb(236, 231, 223);
+    grid-area: fo;
+    }
+
 section{background-color: burlywood;grid-area: se;}
 
 .sticky{
@@ -52,6 +63,20 @@ section{background-color: burlywood;grid-area: se;}
 
 }
 
+
+
+/* Footer text and flexparent*/
+.flexfooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#middle{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
 /* Article text and flexparent*/
 
 .flexarticle{
@@ -66,9 +91,11 @@ section{background-color: burlywood;grid-area: se;}
     background-color: rgb(236, 231, 223);
     box-shadow: -15px -10px 10px -10px black;
     margin-left: 70px;
+    margin-right: 70px;
     padding: 10px;
     height: 400px;
     overflow:auto;
+
 
 }
 
@@ -113,7 +140,7 @@ section{background-color: burlywood;grid-area: se;}
 
 .ListItem:hover{
     text-decoration: underline darkgrey;
-    text-underline-offset: 5px;
+    text-underline-offset: 5px; /*denna funkar även fast det inte står det*/
 
 }
 
@@ -145,7 +172,9 @@ section{background-color: burlywood;grid-area: se;}
       padding: 10px;
   }
 
-/* Bild resizing samt shadow */
+/* Bild resizing */
+
+
 
 #articleimage{
     height: 400px;
@@ -171,7 +200,7 @@ section{background-color: burlywood;grid-area: se;}
         height: 100vh;
         width: 100vw;
     
-        grid-template-rows: 60px 800px 800px 60px;
+        grid-template-rows: 60px 800px 800px 120px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         "na na na na na"
@@ -193,18 +222,19 @@ section{background-color: burlywood;grid-area: se;}
         flex-direction: column;
         justify-content: space-around;
         position: absolute;
-        right: 0px;
+        left: 0px;
         height: 90vh;
         top: -100vh;
         background-color: rgb(83, 80, 80);
         align-items: center;
         width: 20%;
-        transition: 1s;
+        transition: all 1s;
+        box-shadow: -15px -10px 10px 10px black;
 
     }
 
     .activemenu{
-        translate: translateY(100vh+60px);
+    transform: translateY(100vh) ;
     }
 
 #articleimage{
@@ -222,16 +252,19 @@ section{background-color: burlywood;grid-area: se;}
 .burgare{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    margin-left: 8%;
     padding-top: 13px;
 }
 
 .burgare div{
     width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: darkgrey;
     margin: 3px;
     border-radius: 10%;
+    transition: all 0.3s;
+    z-index: 11;
 }
 
 .toggle .line1{
