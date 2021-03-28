@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Götebygg</title>
+    <link rel="stylesheet" href="css/style1.css">
 </head>
+
 <body>
-    
+    <div id="gridparent5">
+
+        <header class="sticky">
+            <p class="Rubrik" id="logotext">Götebygg</p>
+        </header>
+
+
+        <nav class="sticky">
+
+            <div class="burgare">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <ul class="ListHeader">
+                <li class="ListItem"><a class="LinkText" href="index.html">Hem</a></li>
+                <li class="ListItem"><a class="LinkText" href="Service.html">Tjänster</a></li>
+                <li class="ListItem"><a class="LinkText" href="Reference.html">Referenser</a></li>
+                <li class="ListItem"><a class="LinkText" href="">Jakobsblock</a></li>
+                <li class="ListItem"><a class="LinkText" href="Contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <section class="container_img_txt">
+
+            <img class="bigsectionimage" src="img/Paint.webp" alt="bild på arkitekt">
+            <p class="centered" id="welcometext">Kontakta Götebygg</p>
+
+        </section>
+        <main id="mapMain">
+            <div id="interactiveMap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2129.7283579384225!2d11.902970016008558!3d57.73805568113058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464f8b417f005a0d%3A0x709529afb84b8fcd!2sSnorregatan%2010%2C%20417%2028%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1616522826245!5m2!1ssv!2sse"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </main>
+        <footer class="flexfooter">
+            <div id="footertxt">
+                <p class="Rubrik" id="middle">Kontakta oss</p>
+                <p class="brödtext">
+                    Götebygg tar emot nya kunder,
+                    tveka inte att höra av dig för att boka ett möte.
+                </p>
+                <div class="flexalignment">
+                    <p class="brödtext">Patrick Tornmudd,VD</p>
+                    <a href="mailto: 123@example.com">Patrick.Tornmudd@gmail.com</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
