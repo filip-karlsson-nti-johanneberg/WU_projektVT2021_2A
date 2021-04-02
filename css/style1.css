@@ -35,18 +35,66 @@ article {
     background-color:  rgb(83, 80, 80);
     grid-area: ar;
 width: 100vw;
+}
 
+#gridparent3{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
 
+    grid-template-rows: 60px 800px 325px 800px 180px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "he he na na na"
+    "se se se se se"
+    "s2 s2 s2 s2 s2"
+    "s3 s3 s3 s3 s3"
+    "fo fo fo fo fo";
+}
+#section2{
+ background-color: rgb(83, 80, 80);
+ grid-area: s2;   
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
 
+#section3{
+    background-color: blue;
+    grid-area: s3;
+}
+
+#referencetxt{
+    width: 80vw;
+    height: 200px;
+    background-color: rgb(236, 231, 223);
+    box-shadow: 0 4px 12px 0px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
 
 }
 
+#loremTxt{
+    font-style: italic;
+    font-size: 12px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+}
+
+
+body {
+    overflow-x: hidden; 
+  }
 footer {
     background-color:rgb(236, 231, 223);
     grid-area: fo;
     }
 
-section{background-color: burlywood;grid-area: se;}
+.container_img_txt{background-color: burlywood;grid-area: se;}
 
 .sticky{
     position: fixed;
@@ -74,20 +122,6 @@ section{background-color: burlywood;grid-area: se;}
     grid-area: ma;
     background-color: rgb(83, 80, 80);
 }
-
-#interactiveMap{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: darkgrey;
-    width: 32vw;
-    height: 465px;
-    margin-left: 34vw;
-    margin-right: 34vw;
-    
-}
-
-
 
 /* LOGOSTYLING */
 #logotext{
@@ -117,6 +151,12 @@ section{background-color: burlywood;grid-area: se;}
     flex-direction: column;
     align-self: top;
     margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+    
 }
 
 .flexalignment{
@@ -124,6 +164,7 @@ section{background-color: burlywood;grid-area: se;}
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
    
 }
 
@@ -163,6 +204,17 @@ section{background-color: burlywood;grid-area: se;}
     margin-right: 5px;
     margin-bottom: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#bellowMap{
+    color: rgb(236, 231, 223);
+    font-style: italic;
+
+}
+
+#bellowContact{
+    font-style: italic;
+    font-size: 14px;
 }
 
 /* Listan header*/
@@ -277,7 +329,6 @@ section{background-color: burlywood;grid-area: se;}
         align-items: center;
         width: 20%;
         transition: all 1s;
-        box-shadow: -15px -10px 10px 10px black;
 
     }
 
@@ -329,4 +380,6 @@ section{background-color: burlywood;grid-area: se;}
 
 
 }
+
+
 
