@@ -18,6 +18,72 @@
     "ar ar ar ar ar"
     "fo fo fo fo fo";
 }
+#gridparent4{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+
+    grid-template-rows: 60px 800px 900px 180px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "he he na na na"
+    "se se se se se"
+    "gs gs gs gs gs"
+    "fo fo fo fo fo";
+}
+
+.GallerySection{
+    grid-area: gs;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+.Img3{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+.Img2{
+    display: flex;
+    justify-content: center;
+    
+}
+#PSImg1{
+    width: 40vw;   
+    height: 500px;
+    background-color: chartreuse;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-top: 30px;
+
+
+}
+#PSImg2{
+    width: 40vw;
+    height: 500px;
+    background-color: purple;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-top: 30px;
+
+    
+}
+.PhotosImg{
+    height: 300px;
+    width: 30vw;
+    background-color: blue;
+    margin-top: 30px;
+}
+.GallerySection div :hover{
+    transform: scale(1.05);
+    transition: 1s;
+    border-radius: 15px;
+
+}
+.GallerySection div{
+    transition: 1s;
+}
+
 header{
     background-color: rgb(83, 80, 80);
     grid-area: he;
@@ -36,13 +102,69 @@ article {
     grid-area: ar;
 width: 100vw;
 }
+@media screen and (max-width: 1699px) {
+    #gridparent3{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 800px 525px  180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "s3 s3 s3 s3 s3"
+        "fo fo fo fo fo";
+    }
+    #botImg{
+        display: none;
+    }
 
+    .alignbox{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    #italic2{
+        font-style: italic;
+        font-size: 11px;
+    }
+    #topImg{
+        height: 300px;
+        width: 500px;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #topTxtBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(236, 231, 223) ;
+        border-radius: 15px;
+        height: 160px;
+        width: 350px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #botTxtBox{
+        display: none;
+    }
+
+    #section3{
+        background-color: rgb(83, 80, 80);
+        grid-area: s3;
+    }
+
+}
+@media screen and (min-width: 1700px) {
 #gridparent3{
     display: grid;
     height: 100vh;
     width: 100vw;
 
-    grid-template-rows: 60px 800px 325px 800px 180px;
+    grid-template-rows: 60px 800px 325px 900px 180px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "he he na na na"
@@ -57,23 +179,24 @@ width: 100vw;
  display: flex;
  align-items: center;
  justify-content: center;
+ border-bottom: 10px ridge darkgrey;
 }
 
-#section3{
-    background-color: blue;
-    grid-area: s3;
-}
+
 
 #referencetxt{
     width: 80vw;
     height: 200px;
     background-color: rgb(236, 231, 223);
-    box-shadow: 0 4px 12px 0px black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+    overflow: auto;
+    border-radius: 15px;
+ 
+
 
 }
 
@@ -82,9 +205,76 @@ width: 100vw;
     font-size: 12px;
     margin-left: 25px;
     margin-right: 25px;
+}
+
+
+#section3{
+    background-color: rgb(83, 80, 80);
+    grid-area: s3;
+}
+
+.referenceTxt{
+    background-color: rgb(236, 231, 223);
+    width: 500px;
+    height: 275px;
+    margin-bottom: 5vh;
+    margin-top: 7vh;
+    position: relative;
+    right: 40vw;
+    border-radius: 15px;
+    z-index: 9;
+    transition: 2s;
+    transition-delay: 0.5s;
+    display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+.referenceTxt:hover{
+background-color: rgb(236, 231, 223);
+right: 300px;
+transition: 2s;
+transition-delay: 0s;
 
 }
 
+
+.alignbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.referenceImage{
+    height: 300px;
+    width: 499px;
+    z-index: 11;
+
+    margin-left: 15vw;
+    margin-right: 15vw;
+  /*  margin-block: 100px; står att den inte funkar med det gör den*/
+    margin-bottom: 5vh;
+    margin-top: 7vh;
+}
+.refImgSize{
+    height: 300px;
+    width: 500px;
+    filter: grayscale(0.3);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /*DENNA E BRA!*/
+    border-radius: 15px;
+    
+
+}
+
+.refImgSize:hover{
+    filter: grayscale(0);
+    transition: 1s;
+    transition-delay: 0s;
+
+}
+
+}
 
 body {
     overflow-x: hidden; 
@@ -99,7 +289,7 @@ footer {
 .sticky{
     position: fixed;
     top: 0;
-    z-index: 9;
+    z-index: 100;
         box-shadow: 0px 10px 10px -10px black;
 
 }
@@ -173,6 +363,7 @@ footer {
 .flexarticle{
     display: flex;
     align-items: center;
+    justify-content: center;
     box-shadow: -15px 10px 10px -10px black;
 
 }
@@ -180,14 +371,13 @@ footer {
 #articletxt{
     width: 65vw;
     background-color: rgb(236, 231, 223);
-    box-shadow: -15px -10px 10px -10px black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-left: 70px;
     margin-right: 70px;
     padding: 10px;
     height: 400px;
     overflow:auto;
-
-
+    border-radius: 15px;
 }
 
 .Rubrik{
@@ -270,17 +460,22 @@ footer {
       color: darkgrey;
       background-color: black;
       padding: 10px;
+      border-radius: 15px;
   }
 
 /* Bild resizing */
 
 
 
-#articleimage{
+.articleimage{
     height: 400px;
     width: 25vw;
-    margin-left: 50px;
-    box-shadow: -15px -10px 10px -10px black;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    transition: 1s;
+    filter: grayscale(1);
+
 }
 
 .bigsectionimage{
@@ -308,6 +503,20 @@ footer {
         "ar ar ar ar ar"
         "fo fo fo fo fo";
     }
+    #gridparent2{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 800px 500px 400px 180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "ar ar ar ar ar"
+        "ma ma ma ma ma"
+        "fo fo fo fo fo";
+    }
     header{
         display: none;
     }
@@ -316,6 +525,33 @@ footer {
     }
     .ListItem{
         width: 20vw;
+    }
+    #service1{
+        display: none;
+    }
+    #service2{
+        display: none;
+    }
+    #service3{
+        width: 80vw;
+    }
+    .longblock{
+        display: none;
+    }
+    .shortblock{
+        display: flex;
+        height: 300px;
+        width: 60vw;
+        background-color: rgb(236, 231, 223);
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        align-items: center;
+        flex-direction: column;
+    }
+    #main{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
     }
     .ListHeader{
         display: flex;
@@ -332,16 +568,14 @@ footer {
 
     }
 
+
     .activemenu{
     transform: translateY(100vh) ;
     }
 
-#articleimage{
+#firstImg{
     display: none;
-
-
 }
-
 #articletxt{
     width: 80vw;
     height: 600px;
@@ -383,3 +617,62 @@ footer {
 
 
 
+
+
+.articleimage:hover{
+    transform: scale(1.05);
+    filter: grayscale(0);
+    transition: 1s;
+}
+#filterimage{
+    filter: grayscale(0.6);
+}
+.underRubrik{
+    margin-left: 7px;
+    text-decoration: underline;
+
+}
+.longblock{
+    height: 700px;
+    width: 60vw;
+    background-color: rgb(236, 231, 223);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: auto;
+}
+#main{
+    grid-area: ma;
+    background-color:rgb(83, 80, 80);
+}
+.alignsmall{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 721px) {
+.shortblock{
+    display: none;
+
+}
+#gridparent2{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+
+    grid-template-rows: 60px 800px 500px 800px 180px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "he he na na na"
+    "se se se se se"
+    "ar ar ar ar ar"
+    "ma ma ma ma ma"
+    "fo fo fo fo fo";
+}
+
+
+
+
+}
