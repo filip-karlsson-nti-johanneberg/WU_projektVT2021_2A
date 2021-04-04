@@ -23,7 +23,7 @@
     height: 100vh;
     width: 100vw;
 
-    grid-template-rows: 60px 800px 900px 180px;
+    grid-template-rows: 60px 800px 1800px 180px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "he he na na na"
@@ -34,52 +34,86 @@
 
 .GallerySection{
     grid-area: gs;
-    background-color: red;
+    background-color: rgb(83, 80, 80);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .Img3{
     display: flex;
     justify-content: center;
-    justify-content: space-between;
+    margin-top: 10vh;
 }
-.Img2{
-    display: flex;
-    justify-content: center;
-    
-}
+
 #PSImg1{
-    width: 40vw;   
+    width: 60vw;   
     height: 500px;
     background-color: chartreuse;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+border-radius: 15px;
     margin-top: 30px;
+    filter: grayscale(1);
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+}
+#AdOne{
+    width: 60vw;   
+    height: 500px;
+    transition: 1s;
+}
+#AdTwo{
+    width: 80vw;
+    height: 500px;
+    transition: 2s;
 
 }
 #PSImg2{
-    width: 40vw;
+    width: 80vw;
     height: 500px;
     background-color: purple;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    margin-top: 30px;
-
-    
+    border-radius: 15px;
+    margin-top: 80px;
+    filter: grayscale(1);
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+#PSImg2:hover{
+    transform: scale(1.05);
+    transition: 1s;
+    border-radius: 15px;
+    filter: grayscale(0);
+}
+#PSImg1:hover{
+    transform: scale(1.05);
+    transition: 1s;
+    border-radius: 15px;
+    filter: grayscale(0);
+}
+
 .PhotosImg{
     height: 300px;
     width: 30vw;
     background-color: blue;
     margin-top: 30px;
+    margin: 15px;
+    filter: grayscale(1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Imgs{
+    height: 300px;
+    width: 30vw;
+    transition: 1s;
 }
 .GallerySection div :hover{
     transform: scale(1.05);
     transition: 1s;
     border-radius: 15px;
+    filter: grayscale(0);
 
 }
+
+
 .GallerySection div{
     transition: 1s;
 }
@@ -181,9 +215,6 @@ width: 100vw;
  justify-content: center;
  border-bottom: 10px ridge darkgrey;
 }
-
-
-
 #referencetxt{
     width: 80vw;
     height: 200px;
@@ -195,24 +226,17 @@ width: 100vw;
     flex-direction: column;
     overflow: auto;
     border-radius: 15px;
- 
-
-
 }
-
 #loremTxt{
     font-style: italic;
     font-size: 12px;
     margin-left: 25px;
     margin-right: 25px;
 }
-
-
 #section3{
     background-color: rgb(83, 80, 80);
     grid-area: s3;
 }
-
 .referenceTxt{
     background-color: rgb(236, 231, 223);
     width: 500px;
@@ -284,6 +308,13 @@ footer {
     grid-area: fo;
     }
 
+    .Aligner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
 .container_img_txt{background-color: burlywood;grid-area: se;}
 
 .sticky{
@@ -339,7 +370,6 @@ footer {
 #interactiveMap{
     display: flex;
     flex-direction: column;
-    align-self: top;
     margin-top: 20px;
     align-items: center;
     justify-content: center;
@@ -388,7 +418,7 @@ footer {
     font-size: 32px;
 }
 
-.brödtext{
+.breadtext{
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
@@ -489,7 +519,7 @@ footer {
 
 /* mobile overwrite*/
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
     #gridparent{
         display: grid;
         height: 100vh;
@@ -517,6 +547,10 @@ footer {
         "ma ma ma ma ma"
         "fo fo fo fo fo";
     }
+    .Img3{
+        display: none;
+    }
+    
     header{
         display: none;
     }
@@ -537,6 +571,19 @@ footer {
     }
     .longblock{
         display: none;
+    }
+    #PSImg1{
+        width: 80vw;   
+        height: 500px;
+        background-color: chartreuse;
+    border-radius: 15px;
+        filter: grayscale(1);
+        transition: 1s;
+    }
+    #AdOne{
+        width: 80vw;   
+        height: 500px;
+        transition: 1s;
     }
     .shortblock{
         display: flex;
@@ -585,7 +632,6 @@ footer {
 .burgare{
     display: flex;
     flex-direction: column;
-    align-items: left;
     margin-left: 8%;
     padding-top: 13px;
 }
