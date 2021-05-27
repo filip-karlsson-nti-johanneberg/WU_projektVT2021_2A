@@ -717,8 +717,76 @@ footer {
     "ma ma ma ma ma"
     "fo fo fo fo fo";
 }
-
-
-
+}
+/* RESIZE AV BAKRUNDSBILDER */
+@media screen and (max-width: 1000px){
+    #gridparent{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 650px 850px 180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "ar ar ar ar ar"
+        "fo fo fo fo fo";
+    }
+    #gridparent2{    
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 650px 500px 800px 180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "ar ar ar ar ar"
+        "ma ma ma ma ma"
+        "fo fo fo fo fo";}
+    #gridparent3{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 650px 525px  180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "s3 s3 s3 s3 s3"
+        "fo fo fo fo fo";
+    }
+    #gridparent4{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 650px 1800px 180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "gs gs gs gs gs"
+        "fo fo fo fo fo";
+    }
+    #gridparent5{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 650px 600px 480px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "ma ma ma ma ma"
+        "fo fo fo fo fo";
+    }
+    .bigsectionimage{
+        height: 650px;
+    }
 
 }
