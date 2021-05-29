@@ -178,8 +178,8 @@ width: 100vw;
         align-items: center;
         background-color:rgb(236, 231, 223) ;
         border-radius: 15px;
-        height: 160px;
-        width: 350px;
+
+        width: 90vw;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     #botTxtBox{
@@ -520,6 +520,14 @@ footer {
 /* mobile overwrite*/
 
 @media screen and (max-width: 768px) {
+    .ListItem{
+        display: block;
+        text-align: center;
+        padding: 0px;
+        text-decoration: none;
+        transition: 1s;
+    
+    }
     #gridparent{
         display: grid;
         height: 100vh;
@@ -587,7 +595,7 @@ footer {
     }
     .shortblock{
         display: flex;
-        height: 300px;
+
         width: 60vw;
         background-color: rgb(236, 231, 223);
         border-radius: 15px;
@@ -615,10 +623,9 @@ footer {
 
     }
 
-
     .activemenu{
     transform: translateY(100vh) ;
-    }
+    } 
 
 #firstImg{
     display: none;
@@ -789,4 +796,115 @@ footer {
         height: 650px;
     }
 
+}
+
+@media screen and (max-width: 420px){
+    #gridparent{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 550px 750px 180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "ar ar ar ar ar"
+        "fo fo fo fo fo";
+    }
+    #gridparent2{    
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 550px 500px 414px 180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "ar ar ar ar ar"
+        "ma ma ma ma ma"
+        "fo fo fo fo fo";}
+    #gridparent3{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 550px 525px  180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "s3 s3 s3 s3 s3"
+        "fo fo fo fo fo";
+    }
+    #gridparent4{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 550px 900px 180px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "gs gs gs gs gs"
+        "fo fo fo fo fo";
+    }
+    #gridparent5{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    
+        grid-template-rows: 60px 550px 480px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he na na na"
+        "se se se se se"
+        "fo fo fo fo fo";
+    }
+    .bigsectionimage{
+        height: 550px;
+    }
+    #topImg{
+        height: 300px;
+        width: 95vw;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #section2{
+        display: none;
+    }
+    #PSImg1{
+        width: 80vw;   
+        height: 350px;
+        background-color: chartreuse;
+    border-radius: 15px;
+        filter: grayscale(1);
+        transition: 1s;
+    }
+    #AdOne{
+        width: 80vw;   
+        height: 350px;
+        transition: 1s;
+    }
+    #AdTwo{
+        width: 80vw;
+        height: 350px;
+        transition: 2s;
+    
+    }
+    #PSImg2{
+        width: 80vw;
+        height: 350px;
+        background-color: purple;
+        border-radius: 15px;
+        margin-top: 80px;
+        filter: grayscale(1);
+        transition: 1s;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #mapMain{
+        display: none;
+    }
 }
